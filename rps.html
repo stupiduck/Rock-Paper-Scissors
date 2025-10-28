@@ -11,8 +11,12 @@
         function getHumanChoice() {
             return prompt("Rock Paper or Scissors?");
         }
-        humanChoice=getHumanChoice();
-        console.log(humanChoice);
+
+        
+
+        let humanChoice=getHumanChoice();
+        let computerChoice=getComputerChoice();
+        console.log(humanChoice + " vs " +computerChoice);
 
         //Declaring Player Scope Variables
         let humanScore = 0;
@@ -84,8 +88,7 @@
             function capitalizeFirstLetter(s) {
                 return s.slice(0,1).toUpperCase()+s.slice(1);
             }
-        }
-        
+        }        
     </script>
 </body>
 </html>
