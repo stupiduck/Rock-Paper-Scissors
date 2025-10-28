@@ -27,10 +27,6 @@
             }
         }
 
-        let humanChoice=getHumanChoice();
-        let computerChoice=getComputerChoice();
-        console.log(humanChoice + " vs " +computerChoice);
-
         //Declaring Player Scope Variables
         let humanScore = 0;
         let computerScore = 0;
@@ -101,7 +97,23 @@
             function capitalizeFirstLetter(s) {
                 return s.slice(0,1).toUpperCase()+s.slice(1);
             }
-        }        
+        }
+        
+        function playGame() {
+            for(let i=0;i<5;i++) {
+                while (playRound(getHumanChoice(),getComputerChoice())===-1){
+                    console.log("Invalid Choice Retry!");
+                }
+            }
+            console.log("Game Ends!")
+            if(humanScore>computerScore) {
+                console.log("You Win with "+humanScore+" "+computerScore);
+            } else if (computerScore>humanScore) {
+                console.log("You Loose with "+humanScore+" "+computerScore);
+            } else {
+                console.log("It's a draw");
+            }
+        }
     </script>
 </body>
 </html>
